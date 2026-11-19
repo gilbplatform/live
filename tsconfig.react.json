@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "noEmit": true,
+    "paths": {
+      "react": ["./node_modules/@types/react/index.d.ts", "../../.scratch/react-env/node_modules/@types/react/index.d.ts"],
+      "react/*": ["./node_modules/@types/react/*", "../../.scratch/react-env/node_modules/@types/react/*"],
+      "react-dom": ["./node_modules/@types/react-dom/index.d.ts", "../../.scratch/react-env/node_modules/@types/react-dom/index.d.ts"],
+      "react-dom/*": ["./node_modules/@types/react-dom/*", "../../.scratch/react-env/node_modules/@types/react-dom/*"],
+      "@testing-library/react": ["./node_modules/@testing-library/react/types/index.d.ts", "../../.scratch/react-env/node_modules/@testing-library/react/types/index.d.ts"],
+      "@testing-library/dom": ["./node_modules/@testing-library/dom/types/index.d.ts", "../../.scratch/react-env/node_modules/@testing-library/dom/types/index.d.ts"]
+    }
+  },
+  "exclude": [],
+  "include": ["src/react/**/*.ts", "test/react/**/*.ts", "vitest.react.config.ts"]
+}
